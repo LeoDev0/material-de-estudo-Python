@@ -8,8 +8,10 @@ import string
 def home(request):
   return render(request, 'generator/home.html')
 
-def password(request):
+def about(request):
+  return render(request, 'generator/about.html')
 
+def password(request):
   length = int(request.GET.get('length', 12))  # o 12 é o valor padrão da variável caso não tenha sido dado nenhuma valor pelo usuário
 
   characters = ''
