@@ -16,9 +16,11 @@
 
     {% for post in posts %}
     <div class="jumbotron">
-      <h1 class="text-primary"><strong>{{post.title}}</strong></h1>
+      <a href="{% url 'blog:detail' post.id %}">
+        <h1 class="text-primary"><strong>{{ post.title }}</strong></h1>
+      </a>
       <div class="text-muted mb-3"><strong>{{ post.date }}</strong></div>
-      <p>{{post.body}}</p>
+      <p>{{ post.body }}</p>
     </div>
     {% endfor %}
 

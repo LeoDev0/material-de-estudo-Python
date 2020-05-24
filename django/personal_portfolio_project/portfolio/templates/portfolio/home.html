@@ -7,11 +7,15 @@
   <title>Personal Portfolio</title>
 </head>
 <body>
+  {% load static %}
+  
   <a href="/admin">Admin</a>
   <a style="float: right" href="/blog">Blog</a>
+  <a href="{% static 'portfolio/resume.pdf' %}">Resume</a>
 
   <div style="text-align: center;">
     <h2>Welcome to my Portfolio</h2>
+    <img height="450px" width="auto" src="{% static 'portfolio/photo.jpg' %}" alt="teste">
   </div>
 
   {% for project in projects %}
