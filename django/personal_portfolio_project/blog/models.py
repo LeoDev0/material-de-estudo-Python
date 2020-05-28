@@ -5,3 +5,7 @@ class Posts(models.Model):
   date = models.DateField()
   body = models.TextField()
 
+
+  def __str__(self):
+    return f'{self.title} ({self.id})'
+
