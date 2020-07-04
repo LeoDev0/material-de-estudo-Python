@@ -10,10 +10,11 @@ def busca_menor(arr):
             menor_indice = i
     return menor_indice
 
-def ordernacao_por_selecao(arr):
+
+def ordenacao_por_selecao(arr):
     novo_arr = []
     for i in range(len(arr)):
-        # Encontra o menor elemento no array e adiciona no novo array 
+        # Encontra o menor elemento no array e adiciona no novo array
         menor = busca_menor(arr)
         novo_arr.append(arr.pop(menor))
     return novo_arr
@@ -21,4 +22,4 @@ def ordernacao_por_selecao(arr):
 
 arr = [3, 7, 5, 0, 2, 1]
 
-print(ordernacao_por_selecao(arr))
+print(ordenacao_por_selecao(arr))
