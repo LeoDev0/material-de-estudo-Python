@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    web:
+        build: .
+        ports:
+            - '8000:8000'
+        volumes:
+            - '.:/app'  # Monta os volumes da raiz do meu projeto local para dentro do container no diretório '/app' criado no Dockerfile. 
+        command: python app.py

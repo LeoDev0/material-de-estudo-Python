@@ -1,12 +1,13 @@
 FROM python:3.7-alpine
 
+ENV PYTHONUNBUFFERED 1
+
 COPY ./requirements.txt /requirements.txt
 
 RUN pip install -r /requirements.txt 
 
-COPY ./app.py /app.py
+RUN mkdir /app
 
-# ENTRYPOINT ["python"]
-# CMD ["app.py"]
+WORKDIR /app
 
-ENTRYPOINT python app.py
+COPY ./app.py /app/app.py
