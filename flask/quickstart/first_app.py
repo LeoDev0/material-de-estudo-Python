@@ -12,4 +12,15 @@ def hello():
 
 * É possível tbm especificar ip local do host '--host=127.0.0.1'
   e porta com '--port=8000'
+
+===============================================================
+
+* Outra forma de iniciar a aplicação seria usar esse trecho de 
+código abaixo:
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0')
+
+* e apenas rodar 'python first-app.py'
+
 """
