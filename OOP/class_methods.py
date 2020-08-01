@@ -9,12 +9,17 @@
 
 
 class Person:
-  number_of_people = 0
-  GRAVITY = -9.8
+  number_of_people = 0   # <-- Class Attribute: 
+  GRAVITY = -9.8         # É um atributo DA CLASSE, e não da instância. São variáveis de 
+                         # valor pré-definido de dentro da classe mas fora do método construtor
+                         # (__init__), ou seja, todas as instâncias terão o valor padrão. 
+                         # Não usa self e vc não precisa instanciar uma classe para acessar 
+                         # um atributo de classe usando NomeDaClasse.nome_da_class_attribute.
 
   def __init__(self, name):
-    self.name = name
-    Person.add_person()
+    self.name = name        # <--- Instance Attribute:
+    Person.add_person()     # Variáveis definidas dentro do métodos construtor da classe, 
+                            # ou seja, o valor é definido no momento da instanciação. Usa o self.	 
 
   @classmethod
   def get_number_of_people(cls):
