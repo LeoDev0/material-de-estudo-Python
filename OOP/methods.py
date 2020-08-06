@@ -26,8 +26,19 @@ class CashRegister:
 
     """Helper function protegida"""
     def _calculate_tax(self, amount):
-        # return amount * CashRegister.tax  # Essa é outra possibilidade para referenciar a classe que não usando o self: colocando diretamente o nome da classe.
-        return amount * self.tax
+        """
+        Essa sintaxe <ClassName>.<attribute> deve ser usada para referenciar
+        atributos de classe fora do escopo da classe (ex: funções em outra
+        parte do programa) pois o uso do self nesse caso poderia causar um
+        problema de "prioridade" no caso de existir um atributo de instância
+        com o mesmo nome "tax".
+        E também, trocar o valor desse atributo de classe usando self,
+        o valor só vai ser trocado dentro dessa instância e não em todas
+        as classes. É como se vc transformasse esse atributo de classe
+        em um atributo de instância.
+        """
+        return amount * CashRegister.tax
+        # return amount * self.tax  # Sintaxe errada
         
 register = CashRegister("Melanie", "3453513")
 register.display_total(5022.5)
