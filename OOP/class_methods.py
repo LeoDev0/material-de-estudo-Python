@@ -4,9 +4,10 @@
 # They have the access to the state of the class as it takes a class parameter 
 # that points to the class and not the object instance.
 
-# It can modify a class state that would apply across all the instances of the class. 
+# It CAN modify a class state that would apply across all the instances of the class. 
 # For example it can modify a class variable that will be applicable to all the instances. 
 
+# It CANNOT modify object instance state
 
 class Person:
   number_of_people = 0   # <-- Class Attribute: 
